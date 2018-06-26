@@ -11,6 +11,9 @@ This plugin send the magnet torrent link to be downloaded by Deluge-Web.
 
 Deluge-Web is a feature of deluge itself, <a href="https://dev.deluge-torrent.org/wiki/UserGuide/ThinClient#WebUI" target="_blank">here</a> you can find more about deluge-web.
 
+## Instalation
+<a href="https://addons.mozilla.org/pt-BR/firefox/addon/delugeaddtorrent/" target="_blank">Addons Mozilla.</a>
+
 ## How to Use
 
 - First things first, before use the plugin you MUST have a deluge-web tab openned and authenticated. It is necessary because DelugeAddTorrent send the xmlHttpRequest throught this tab to avoid CORS errors.
@@ -26,3 +29,5 @@ Deluge is a BitTorrent client. It is Free Software and licensed under the GNU GP
 ## License
 
 This source code is licensed under the license found in the ['LICENSE'](LICENSE) file in the root directory of this source tree.
+
+

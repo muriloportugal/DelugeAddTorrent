@@ -20,13 +20,23 @@
 	},
 
 	"textAboutOptions":{
-		"message": "Este plugin envia o magnet link para download utilizando o Deluge-Web.<br>Deluge-Web é um recurso do próprio deluge, neste <a href=\"https://dev.deluge-torrent.org/wiki/UserGuide/ThinClient#WebUI\" target=\"_blank\">link</a> você encontrará mais informação sobre o deluge-web.",
+		"message": "Este plugin envia o magnet link para download utilizando o Deluge-Web, que é um recurso do próprio deluge.\r\nNo link abaixo você encontrará mais informação sobre este plugin, inclusive como utiliza-lo.",
 		"description": "ID do contextMenu."
 	},
 
 	"aboutOptions":{
 		"message": "Sobre:",
 		"description": "ID do contextMenu."
+	},
+
+	"errorNotMagnet": {
+		"message": "Não é um magnet link, $LINK$",
+		"description": "Erro ao tentar enviar um link inválido",
+		"placeholders": {
+			"link" : {
+		    	"content" : "$1"
+		    }
+		}
 	},
 
 	"errorUrlOptions":{
