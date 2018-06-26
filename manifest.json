@@ -4,7 +4,7 @@
 	"version": "1.0",
 
 	"description": "__MSG_extensionDescription__",
-	"homepage_url": "https://github.com/muriloportugal/FirefoxExtensions",
+	"homepage_url": "https://github.com/muriloportugal/DelugeAddTorrent",
 	
 	"icons":{
 		"48": "icons/deluge-48.png"
