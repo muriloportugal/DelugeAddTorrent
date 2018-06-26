@@ -1,0 +1,95 @@
+/*  
+	DelugeAddTorrent,
+	Copyright (C) 2018  Murilo Portugal
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see [http://www.gnu.org/licenses/].
+ */
+{
+	"extensionName":{
+		"message": "DelugeAddTorrent",
+		"description": "Name of the extension."
+	},
+
+	"extensionDescription": {
+		"message": "Send the magnet link to download.",
+		"description": "Description of the extension."
+	},
+
+	"contextTitle": {
+		"message": "Download with Deluge",
+		"description": "Text of the contextMenu item."
+	},
+
+	"contextId": {
+		"message": "delugeAddTorrent",
+		"description": "ID of the contextMenu."
+	},
+
+	"textAboutOptions":{
+		"message": "This plugin send the magnet link to download using de Deluge-Web.<br>Deluge-Web is a feature of deluge itself, at this <a href=\"https://dev.deluge-torrent.org/wiki/UserGuide/ThinClient#WebUI\" target=\"_blank\">link</a> you can find more about deluge-web.",
+		"description": "ID do contextMenu."
+	},
+	
+	"aboutOptions":{
+		"message": "About:",
+		"description": "ID do contextMenu."
+	},
+
+	"errorUrlOptions":{
+		"message": "Not informed the deluge-web url in the options panel",
+		"description": "Error when not informe the deluge-web url in extension options."
+	},
+
+	"errorQueryUrl": {
+		"message": "Can't find the tab to the informed url, $URL$ => $URLPATTERN$",
+		"description": "Error when cant find the deluge-web tab",
+		"placeholders": {
+			"url" : {
+		    	"content" : "$1",
+		    	"example" : "http://delugeweb:port/"
+		    },
+		    "urlpattern":{
+		    	"content" : "$2",
+		      	"example" : "*://*.mozilla.org/*"
+		    }
+		}
+	},
+
+	"errorDelugeMethod":{
+		"message": "Receive the error '$ERROR$' when trying to send method '$METHOD$'",
+		"description": "Error when response request came with error from deluge.",
+		"placeholders": {
+			"error" : {
+		    	"content" : "$1"
+		    },
+		    "method" : {
+		    	"content" : "$2"
+		    }
+		}
+	},
+
+	"errorXmlHttpRequest":{
+		"message": "Error, received status $STATUS$ when trying send xmlHttpRequest $METHOD$",
+		"description": "Error when get some problem to send a request to deluge.",
+		"placeholders": {
+			"status" : {
+		    	"content" : "$1"
+		    },
+		    "method" : {
+		    	"content" : "$2"
+		    }
+		}
+	}
+
+}
