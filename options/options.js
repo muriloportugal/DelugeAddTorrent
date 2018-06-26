@@ -25,6 +25,7 @@ function saveOptions(e){
 function restoreOptions(){
 	function setCurrentChoice(result){
 		document.querySelector('#dUrl').value = result.dUrl || 'http://delugeweb:port/';
+		
 	}
 
 	function onError(error){
@@ -37,5 +38,5 @@ function restoreOptions(){
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
-document.getElementById("textAbout").innerHTML = browser.i18n.getMessage("textAboutOptions");
-document.getElementById("about").innerHTML = browser.i18n.getMessage("aboutOptions");
+document.querySelector('#textAbout').textContent = browser.i18n.getMessage("textAboutOptions");
+document.querySelector('#about').textContent = browser.i18n.getMessage("aboutOptions");

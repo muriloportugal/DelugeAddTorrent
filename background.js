@@ -28,6 +28,10 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 			console.error(browser.i18n.getMessage("errorUrlOptions"));
 			return false;
 		}
+		if (!info.linkUrl.startsWith('magnet')) {
+			console.error(browser.i18n.getMessage("errorNotMagnet",[info.linkUrl]));
+			return false
+		}
 		var magnetLink = info.linkUrl;
 		var url = result.dUrl;
 		var queryUrl = result.dUrl;
