@@ -4,7 +4,6 @@
 <br>
 <br>
 
-
 ## Introduction
 
 This plugin send the magnet torrent link to be downloaded by Deluge-Web.
