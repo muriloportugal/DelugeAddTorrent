@@ -19,11 +19,19 @@
 	],
 
 	"options_ui":{
+		"browser_style": false,
 		"page": "options/options.html"
 	},
 
 	"background": {
 		"scripts":["background.js"]
+	},
+
+	"applications": {
+		"gecko": {
+			"id": "DelugeAddTorrent@example.com",
+			"strict_min_version": "42.0"
+		}
 	},
 
 	"default_locale": "en"
