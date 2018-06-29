@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "__MSG_extensionName__",
-	"version": "1.0",
+	"version": "1.1.2",
 
 	"description": "__MSG_extensionDescription__",
 	"homepage_url": "https://github.com/muriloportugal/DelugeAddTorrent",
@@ -15,11 +15,12 @@
 		"<all_urls>",
 		"activeTab",
 		"tabs",
-		"storage"
+		"storage",
+		"notifications"
 	],
 
 	"options_ui":{
-		"browser_style": false,
+		"browser_style": true,
 		"page": "options/options.html"
 	},
 

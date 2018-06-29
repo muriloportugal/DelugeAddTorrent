@@ -25,7 +25,9 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 	//Get delugeWeb Url informed in options
 	browser.storage.local.get("dUrl", function(result){
 		if (!result.dUrl) {
+			notification(browser.i18n.getMessage("errorUrlOptions"));
 			console.error(browser.i18n.getMessage("errorUrlOptions"));
+			browser.runtime.openOptionsPage();
 			return false;
 		}
 		if (!info.linkUrl.startsWith('magnet')) {
@@ -66,10 +68,27 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 		  	return false;
 		  }
 		  for (let tab1 of tabs) {
-			browser.tabs.executeScript(tab1.id,{file: 'content_scripts/content.js'}, function(){
-				browser.tabs.sendMessage(tab1.id,jsonObj);
+			browser.tabs.executeScript(tab1.id,{file: 'content_scripts/content.js'}, function() {
+				browser.tabs.sendMessage(tab1.id,jsonObj).then( response => {
+					notification(browser.i18n.getMessage("sucessTorrent",[response.torrentName]));
+				}, error => {
+					var error_message = JSON.parse(error.message);
+					console.error(browser.i18n.getMessage("failTorrent",[error_message.torrentName, error_message.errorMessage]));
+					notification(browser.i18n.getMessage("failTorrent",[error_message.torrentName, error_message.errorMessage]));
+				});
 			});
 		  }
+		}
+
+		function notification(message){
+			browser.notifications.create({
+				type: 'basic',
+		        iconUrl: browser.extension.getURL('icons/deluge-48.png'),
+		        title: browser.i18n.getMessage("extensionName"),
+				message: message
+			}).then((id) =>{
+				setTimeout(() => browser.notifications.clear(id), 5000);
+			});
 		}
 
 		function onError(error) {

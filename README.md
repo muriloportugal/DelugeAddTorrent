@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This plugin send the magnet torrent link to be downloaded by Deluge-Web.
+Send the torrent magnet link to Deluge Web UI.
 
 Deluge-Web is a feature of deluge itself, <a href="https://dev.deluge-torrent.org/wiki/UserGuide/ThinClient#WebUI" target="_blank">here</a> you can find more about deluge-web.
 

@@ -15,17 +15,18 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see [http://www.gnu.org/licenses/].
  */
+
+
 function saveOptions(e){
 	e.preventDefault();
-	browser.storage.local.set({
-		dUrl: document.querySelector('#dUrl').value
-	});
+	browser.storage.local.set({ 
+    	dUrl: document.querySelector('#dUrl').value 
+  	});
 }
 
 function restoreOptions(){
 	function setCurrentChoice(result){
-		document.querySelector('#dUrl').value = result.dUrl || 'http://delugeweb:port/';
-		
+		document.querySelector('#dUrl').value = result.dUrl || 'http://127.0.0.1:8112/';		
 	}
 
 	function onError(error){
@@ -37,6 +38,6 @@ function restoreOptions(){
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
-document.querySelector("form").addEventListener("submit", saveOptions);
-document.querySelector('#textAbout').textContent = browser.i18n.getMessage("textAboutOptions");
-document.querySelector('#about').textContent = browser.i18n.getMessage("aboutOptions");
+document.querySelector("#saveButton").addEventListener("click",saveOptions);
+document.querySelector('#labeldUrl').textContent = browser.i18n.getMessage("labeldUrl");
+document.querySelector('#saveButton').textContent = browser.i18n.getMessage("saveButton");
