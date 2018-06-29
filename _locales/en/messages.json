@@ -19,14 +19,38 @@
 		"description": "ID of the contextMenu."
 	},
 
-	"textAboutOptions":{
-		"message": "This plugin send the magnet link to download using de Deluge-Web, it is a feature of deluge itself.\r\nAt link below you can find informations about this plugin, including how to use.",
-		"description": "ID do contextMenu."
+	"labeldUrl":{
+		"message": "Deluge Web URL",
+		"description": "Label of the page options"
 	},
-	
-	"aboutOptions":{
-		"message": "About:",
-		"description": "ID do contextMenu."
+
+	"saveButton":{
+		"message": "Save",
+		"description": "Save the url of the deluge web."
+	},
+
+		"sucessTorrent":{
+		"message": "$TORNAME$ added successfully",
+		"description": "Torrent added successfully.",
+		"placeholders": {
+			"torname" : {
+		    	"content" : "$1"
+		    }
+		}
+	},
+
+	"failTorrent":{
+		"message": "$TORNAME$ failed, error: $ERROR$",
+		"description": "Failed to send torrent to download.",
+		"placeholders": {
+			"torname" : {
+		    	"content" : "$1"
+		    },
+
+		    "error" : {
+		    	"content" : "$2"
+		    }
+		}
 	},
 
 	"errorNotMagnet": {
