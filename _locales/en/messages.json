@@ -53,6 +53,11 @@
 		}
 	},
 
+	"errorGetTorrentName":{
+		"message": "Torrent",
+		"description": "Error to find torrent name"
+	},
+
 	"errorNotMagnet": {
 		"message": "It is not a torret magnet link, $LINK$",
 		"description": "Error when try sending a not magnet link",
