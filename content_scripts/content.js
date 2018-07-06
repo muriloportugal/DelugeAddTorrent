@@ -63,8 +63,15 @@ browser.runtime.onMessage.addListener(request =>{
 	}
 
 	function getName(url){
-		var url_dec = decodeURIComponent(url).match(/(?=&dn=)(.*)(?=&tr=h)/)[0];
-		var torrentName = url_dec.slice(4,url_dec.lenght);
+		var url_dec = decodeURIComponent(url);
+		var urlArray = url_dec.split('&');
+		var torrentName = null;
+		for (var i = 0; i < urlArray.length; i++) {
+			if (urlArray[i].startsWith('dn=')) {
+				torrentName = urlArray[i].slice(3,urlArray[i].length);
+			}
+		}
+		if (torrentName === null) torrentName = browser.i18n.getMessage("errorGetTorrentName");
 		return torrentName;
 	}
 });

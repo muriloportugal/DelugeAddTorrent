@@ -49,7 +49,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 		if(queryUrl.match("http?.://")){
 			queryUrl = queryUrl.replace(queryUrl.match("http?.://"),"");
 		}
-		//Revemo port if exists
+		//Remove port if exists
 		if(queryUrl.match(":[0-9]+")){
 			queryUrl = queryUrl.replace(queryUrl.match(":[0-9]+"),"");
 		}
